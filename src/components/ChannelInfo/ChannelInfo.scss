@@ -1,0 +1,95 @@
+.channel-info {
+  padding-top: 30px;
+  margin-bottom: 30px;
+
+  .js-active & {
+    padding-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    transition: transform 0.1s ease-in-out;
+    transform: translateX(0);
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    background: #232728;
+  }
+
+  .js-active &_active {
+    transform: translateX(-100%);
+  }
+
+  &__header {
+    padding: 0 3px;
+    height: 30px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-bottom: 1px solid gray;
+    display: none;
+
+    .js-active & {
+      display: block;
+    }
+  }
+
+  .header__back-link {
+    line-height: 30px;
+    height: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &__general {
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+
+  &__members {
+    color: gray;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 18px;
+    white-space: pre;
+  }
+
+  &__title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 20px;
+  }
+
+  &__content {
+    padding: 0 10px;
+  }
+
+  &__logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0;
+    float: left;
+    margin-right: 15px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__block {
+    border-bottom: 1px solid gray;
+    padding: 0 0 8px;
+    margin-bottom: 12px;
+
+    &-title {
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 5px;
+      color: #2DA5E0;
+    }
+  }
+}

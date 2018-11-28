@@ -1,0 +1,139 @@
+.post-list {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+
+  &__item {
+    margin: 0 0 20px;
+    box-shadow: 0 1px 5px black;
+    white-space: pre-wrap;
+    background: rgba(255,255,255,0.03);
+    font-size: 13px;
+    line-height: 19px;
+    position: relative;
+
+    &-removed {
+      float: right;
+      font-size: 20px;
+      color: red;
+      width: 40px;
+      line-height: 40px;
+      text-align: center;
+    }
+
+    &_deleted {
+      opacity: 0.5;
+    }
+
+    &-content {
+      display: block;
+      padding: 10px;
+    }
+
+    &_location &-content {
+      padding: 66.66666667% 0 0;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    &_photo &-content,
+    &_animation &-content,
+    &_video &-content{
+      padding: 0;
+    }
+
+    &_videonote video {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 256px;
+      height: 256px;
+      box-shadow: 0 1px 2px 1px black;
+    }
+
+    &_photo,
+    &_animation,
+    &_location,
+    &_video {
+      img, video {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &_photo &-bottom,
+    &_animation &-bottom,
+    &_video &-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.8);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &_contact img {
+      width: 80px;
+      height: 80px;
+    }
+
+    &_sticker img {
+      max-width: 256px;
+      max-height: 256px;
+    }
+
+    &_sticker &-content,
+    &_videonote &-content{
+      text-align: center;
+    }
+
+    &_sticker &-content {
+      line-height: 256px;
+      height: 276px;
+    }
+
+    &-page-link {
+      float: right;
+      font-size: 18px;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+    }
+
+    &-link {
+      float: right;
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+    }
+
+    &-bottom {
+      padding: 0 10px;
+      line-height: 40px;
+      font-size: 10px;
+      overflow: hidden;
+      border-top: 1px solid rgba(255,255,255,0.3);
+    }
+  }
+
+  &__img-text {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    padding: 8px 10px;
+    max-height: 40%;
+    overflow: auto;
+  }
+}

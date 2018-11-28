@@ -1,0 +1,15 @@
+.channel-page {
+  padding: 41px 0 0;
+  width: 100%;
+
+  .js-active & {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+
+
+  .js-active &__main {
+    height: 100%;
+  }
+}

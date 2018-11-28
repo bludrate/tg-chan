@@ -1,0 +1,51 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  background: #232728;
+  box-shadow: 0 0 1px rgba(0,0,0,0.7);
+
+  &__back-link {
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 30px;
+    margin-right: 5px;
+    padding: 5px;
+    float: left;
+    color: #2DA5E0;
+    background: none;
+    border: none;
+
+    .fa-bullhorn {
+      font-size: 18px;
+      vertical-align: top;
+      margin-top: 5px;
+      margin-left: 3px;
+      transform: scaleX(-1);
+    }
+  }
+
+  &__channel-logo {
+    margin: 0 0 0 10px;
+    padding: 5px;
+  }
+
+  &__channel-logo img {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+  }
+
+  &__channel-info {
+    text-align: center;
+    overflow: hidden;
+    padding-top: 7px;
+    line-height: 14px;
+    font-size: 12px;
+  }
+
+  &__channel-title {
+    font-weight: bold;
+  }
+}
