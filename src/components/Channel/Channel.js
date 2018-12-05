@@ -11,6 +11,7 @@ function mapStateToProps( state, props ) {
   const channel = state.channel.data;//state.channels.find( c => c.username === props.match.params.username ) || {};
   const showChannelInfo = state.channel.showChannelInfo;
   const postIndex = props.match.params.postIndex;
+  const isPostPage = !!postIndex;
 
   if ( !channel ) {
     return {
@@ -19,6 +20,16 @@ function mapStateToProps( state, props ) {
         code: 404
       }
     };
+  }
+
+  if ( props.match.params.username !== channel.username ) {
+    return {
+      channel: {
+        posts: []
+      },
+      loaded: false,
+      isPostPage,
+    }
   }
 
   if ( channel.posts && props.match.params.postIndex ) {
@@ -34,7 +45,7 @@ function mapStateToProps( state, props ) {
     channel,
     showChannelInfo,
     loaded: postIndex ? (channel.posts && channel.posts.length):( channel.posts && channel.posts.length > 1 ),
-    isPostPage: !!postIndex,
+    isPostPage,
   };
 }
 
