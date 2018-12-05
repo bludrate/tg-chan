@@ -42,7 +42,7 @@ export default (url) => {
               html: htmlData
                 .replace(
                   '<div id="root"></div>',
-                  `<script>window.__INITIALSTATE__=${JSON.stringify(preloadedState)};</script><div id="root">${html}</div>`
+                  `<script>window.__INITIALSTATE__=${JSON.stringify(preloadedState)};window.API_URL="/api";</script><div id="root">${html}</div>`
                 )
                 .replace(
                   '<head>',

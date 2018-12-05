@@ -6,7 +6,6 @@ const folder = path.resolve(__dirname, '../../..', 'pages');
 
 export default {
   channel: ( { channelUsername, posts} ) => {
-    console.log(channelUsername, posts.filter( p => p.seo.sitemap ).length);
     const sitemapUrls = posts.filter( p => p.seo.sitemap )
       .map(( post ) => {
         return {
