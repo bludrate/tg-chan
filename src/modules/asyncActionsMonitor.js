@@ -1,3 +1,8 @@
+const promiseFinally = require('promise.prototype.finally');
+
+// Add `finally()` to `Promise.prototype`
+promiseFinally.shim();
+
 class AsyncActionsMonitor{
   actions = [];
 
