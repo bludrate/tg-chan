@@ -88,7 +88,7 @@ class Channel extends Component {
         <ChannelInfo channel={channel} active={showChannelInfo} onBackClick={this.onBackClick}/>
         <ChannelHeader isPostPage={isPostPage} channelLink={`/channel/${channel.username}/`} channelLogo={channel.avatar} channelTitle={channel.title} membersCount={channel.members} onChannelLogoClick={this.onChannelLogoClick}/>
         <main className="channel-page__main">
-          <PostList posts={posts}/>
+          <PostList posts={posts} isPostPage={isPostPage}/>
         </main>
       </div>);
   }

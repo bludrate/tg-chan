@@ -1,3 +1,4 @@
+import serverPolifil from './serverPolifil';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import getStore from '../../src/store';

@@ -9,7 +9,8 @@ class ChannelList extends Component {
     this.props.dispatch( actions.channels.fetch() );
   }
   render() {
-    const channels = this.props.list.map( c => {
+    const list = this.props.list || [];
+    const channels = list.map( c => {
       const channelLink = `/channel/${c.username}/`;
       const info = {
         __html: c.info

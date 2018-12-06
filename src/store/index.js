@@ -5,11 +5,7 @@ import rememberAsyncActions from "../middlewares/rememberAsyncActions";
 
 const middlewares = [ rememberAsyncActions ];
 
-if (typeof window === 'undefined') {
-  global.window = {
-    isServer: true
-  };
-} else {
+if ( !window.isServer ) {
   middlewares.push( logger );
 }
 

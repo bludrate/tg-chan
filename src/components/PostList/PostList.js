@@ -17,6 +17,7 @@ class PostList extends Component {
   }
 
   render() {
+    const {isPostPage} = this.props;
     const posts = this.props.posts.map( p => {
       const post = getPostData( p );
 
@@ -83,7 +84,7 @@ class PostList extends Component {
           }
 
           content = (<div className="post-list__item-content" style={videoStyle}>
-            <video width="100%" height="auto" poster={p.content.videoThumb} muted={isVideoNote} autoPlay={isVideoNote} preload="metadata" src={p.content.videoUrl} controls alt={post.text}/>
+            <video width="100%" height="auto" poster={p.content.videoThumb} muted={isVideoNote} autoPlay={isPostPage} preload="metadata" src={p.content.videoUrl} controls alt={post.text}/>
             {videoCaption}
           </div>);
           break;
