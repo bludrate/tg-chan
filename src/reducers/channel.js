@@ -8,6 +8,7 @@ const defaultState = {
 export default (state = defaultState, action) => {
   switch (action.type) {
     case ACTION_TYPES.CHANNEL.FETCH_OK:
+      console.log(action.payload);
       action.payload.avatar = action.payload.avatar.replace(TELEGRAM_CDN, TELEGRAM_CDN_REPLACER);
       action.payload.posts.forEach(p => {
         const contentType = p.content.type.toLowerCase().replace('message', '');
