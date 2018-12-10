@@ -15,20 +15,25 @@ export default (state = defaultState, action) => {
         const contentType = p.content.type.toLowerCase().replace('message', '');
         switch( contentType ) {
           case 'contact':
-            p.content.contactAvatarUrl = p.content.contactAvatarUrl.replace(TELEGRAM_CDN, TELEGRAM_CDN_REPLACER);
+            if( p.content.contactAvatarUrl )
+              p.content.contactAvatarUrl = p.content.contactAvatarUrl.replace(TELEGRAM_CDN, TELEGRAM_CDN_REPLACER);
             break;
           case 'sticker':
-            p.content.stickerUrl = p.content.stickerUrl.replace(TELEGRAM_CDN, TELEGRAM_CDN_REPLACER);
+            if (p.content.stickerUrl)
+              p.content.stickerUrl = p.content.stickerUrl.replace(TELEGRAM_CDN, TELEGRAM_CDN_REPLACER);
             break;
 
           case 'video':
-            p.content.videoThumb = p.content.videoThumb.replace(TELEGRAM_CDN, TELEGRAM_CDN_REPLACER);
+            if (p.content.videoThumb)
+              p.content.videoThumb = p.content.videoThumb.replace(TELEGRAM_CDN, TELEGRAM_CDN_REPLACER);
             break;
           case 'animation':
-            p.content.animationUrl = p.content.animationUrl.replace(TELEGRAM_CDN, TELEGRAM_CDN_REPLACER);
+            if ( p.content.animationUrl)
+              p.content.animationUrl = p.content.animationUrl.replace(TELEGRAM_CDN, TELEGRAM_CDN_REPLACER);
             break;
           case 'photo':
-            p.content.photoUrl = p.content.photoUrl.replace(TELEGRAM_CDN, TELEGRAM_CDN_REPLACER);
+            if (p.content.photoUrl)
+              p.content.photoUrl = p.content.photoUrl.replace(TELEGRAM_CDN, TELEGRAM_CDN_REPLACER);
             break;
         }
       });
