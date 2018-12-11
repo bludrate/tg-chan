@@ -1,5 +1,5 @@
 import express from 'express';
-import expressStaticGzip from 'express-static-gzip';
+//import expressStaticGzip from 'express-static-gzip';
 
 // we'll talk about this in a minute:
 import serverRenderer from './middleware/renderer';
@@ -16,10 +16,11 @@ const router = express.Router();
 router.use(express.static(
     path.resolve(__dirname, '..', 'pages'),
     { maxAge: '30d',
-      index: 'index.html.gz',
+      index: 'index.html',
       setHeaders: function( res ) {
-        res.set('content-encoding', 'gzip');
-        res.set('content-type', 'text/html');
+        //res.set('content-encoding', 'gzip');
+        //console.log(res);
+        //res.set('content-type', 'text/html');
       }
     },
 ));
